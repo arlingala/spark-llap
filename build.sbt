@@ -1,6 +1,6 @@
 
 name := "spark-llap"
-version := "1.1.1-2.1"
+version := "1.1.2-2.1"
 organization := "com.hortonworks.spark"
 scalaVersion := "2.11.8"
 val scalatestVersion = "2.2.6"
@@ -46,7 +46,8 @@ libraryDependencies ++= Seq(
     .exclude("commons-beanutils", "commons-beanutils-core")
     .exclude("javax.servlet", "servlet-api")
     .exclude("stax", "stax-api")
-    .exclude("org.apache.avro", "avro"),
+    .exclude("org.apache.avro", "avro")
+    .exclude("org.apache.hadoop", "hadoop-common"),
 
   ("org.apache.tez" % "tez-runtime-internals" % tezVersion % "compile")
     .exclude("javax.servlet", "servlet-api")
@@ -60,6 +61,7 @@ libraryDependencies ++= Seq(
     .exclude("org.apache.logging.log4j", "log4j-1.2-api")
     .exclude("org.apache.logging.log4j", "log4j-slf4j-impl")
     .exclude("org.apache.logging.log4j", "log4j-web")
+    .exclude("org.apache.hadoop", "hadoop-common")
     .exclude("org.apache.slider", "slider-core")
     .exclude("stax", "stax-api")
     .exclude("javax.servlet", "jsp-api")
